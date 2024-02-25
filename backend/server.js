@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://daldenu.github.io/inventory-management/',
   credentials: true // Если ваш фронтенд отправляет запросы с куками или заголовками авторизации
 }));
 
@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 // Error Middleware
 app.use(errorHandler);
 // Connect to DB and start server
-const PORT = 5000;
+const PORT = 'https://daldenu.github.io/inventory-management/';
 mongoose
   .set('strictQuery', false)
   .connect("mongodb+srv://khusseingashimov21:sP54Rf1xBv3UYryK@mark.hgqiclj.mongodb.net/?retryWrites=true&w=majority")

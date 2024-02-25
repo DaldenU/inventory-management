@@ -12,7 +12,7 @@ export const validateEmail = (email) => {
 export const registerUser = async (userData) => {
   try {
     const response = await axios.post(
-      `http://localhost:5000/api/users/register`,
+      `https://DaldenU.github.io/inventory-management/api/users/register`,
       userData,
       { withCredentials: true }
     );
@@ -33,7 +33,7 @@ export const registerUser = async (userData) => {
 export const loginUser = async (userData) => {
   try {
     const response = await axios.post(
-      `http://localhost:5000/api/users/login`,
+      `https://DaldenU.github.io/inventory-management/api/users/login`,
       userData
     );
     if (response.statusText === "OK") {
@@ -52,7 +52,7 @@ export const loginUser = async (userData) => {
 // Logout User
 export const logoutUser = async () => {
   try {
-    await axios.get(`http://localhost:5000/api/users/logout`);
+    await axios.get(`https://DaldenU.github.io/inventory-management/api/users/logout`);
   } catch (error) {
     const message =
       (error.response && error.response.data && error.response.data.message) ||
@@ -65,7 +65,7 @@ export const logoutUser = async () => {
 export const forgotPassword = async (userData) => {
   try {
     const response = await axios.post(
-      `http://localhost:5000/api/users/forgotpassword`,
+      `https://DaldenU.github.io/inventory-management/api/users/forgotpassword`,
       userData
     );
     toast.success(response.data.message);
@@ -81,7 +81,7 @@ export const forgotPassword = async (userData) => {
 export const resetPassword = async (userData, resetToken) => {
   try {
     const response = await axios.put(
-      `http://localhost:5000/api/users/resetpassword/${resetToken}`,
+      `https://DaldenU.github.io/inventory-management/api/users/resetpassword/${resetToken}`,
       userData
     );
     return response.data;
@@ -97,7 +97,7 @@ export const resetPassword = async (userData, resetToken) => {
 // Get Login Status
 export const getLoginStatus = async () => {
   try {
-    const response = await axios.get(`http://localhost:5000/api/users/loggedin`);
+    const response = await axios.get(`https://DaldenU.github.io/inventory-management/api/users/loggedin`);
     return response.data;
   } catch (error) {
     const message =
@@ -111,7 +111,7 @@ export const getLoginStatus = async () => {
 // Get User Profile
 export const getUser = async () => {
   try {
-    const response = await axios.get(`http://localhost:5000/api/users/getuser`);
+    const response = await axios.get(`https://DaldenU.github.io/inventory-management/api/users/getuser`);
     return response.data;
   } catch (error) {
     const message =
@@ -126,7 +126,7 @@ export const getUser = async () => {
 export const updateUser = async (formData) => {
   try {
     const response = await axios.patch(
-      `http://localhost:5000/api/users/updateuser`,
+      `https://DaldenU.github.io/inventory-management/api/users/updateuser`,
       formData
     );
     return response.data;
@@ -143,7 +143,7 @@ export const updateUser = async (formData) => {
 export const changePassword = async (formData) => {
   try {
     const response = await axios.patch(
-      `http://localhost:5000/api/users/changepassword`,
+      `https://DaldenU.github.io/inventory-management/api/users/changepassword`,
       formData
     );
     return response.data;
