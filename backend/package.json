@@ -1,14 +1,11 @@
 {
-  "homepage": "https://DaldenU.github.io/inventory-management",
   "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "backend": "nodemon server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "backend": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
