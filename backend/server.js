@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 // Error Middleware
 app.use(errorHandler);
 // Connect to DB and start server
-const PORT = 'https://daldenu.github.io/inventory-management/';
+const PORT = process.env.PORT || 5000;
 mongoose
   .set('strictQuery', false)
   .connect("mongodb+srv://khusseingashimov21:sP54Rf1xBv3UYryK@mark.hgqiclj.mongodb.net/?retryWrites=true&w=majority")
