@@ -255,7 +255,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
   }).save();
 
   // Construct Reset Url
-  const resetUrl = `http://localhost:5000/resetpassword/${resetToken}`;
+  const resetUrl = `https://daldenu.github.io/inventory-management/resetpassword/${resetToken}`;
 
   // Reset Email
   const message = `

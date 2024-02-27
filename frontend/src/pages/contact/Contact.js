@@ -18,7 +18,7 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5000/api/contactus`, data);
+      const response = await axios.post(`https://daldenu.github.io/inventory-management/api/contactus`, data);
       setSubject("");
       setMessage("");
       toast.success(response.data.message);

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const API_URL = `http://localhost:5000/api/products/`;
+const API_URL = `https://daldenu.github.io/inventory-management/api/products/`;
 
 // Create New Product
 const createProduct = async (formData) => {
