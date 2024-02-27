@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://daldenu.github.io/inventory-management',
+  origin: 'https://daldenu.github.io/inventory-management/',
   credentials: true // Если ваш фронтенд отправляет запросы с куками или заголовками авторизации
 }));
 
